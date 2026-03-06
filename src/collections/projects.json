@@ -1,38 +1,72 @@
 [
 	{
-		"name": "TempMail.Best",
-		"description": "Best Temporary Email.",
-		"image": "/assets/images/projects/tempmail.best.png",
-		"url": "https://tempmail.best"
+		"name": "INSENDI Plugin",
+		"description": "Design and launch of a new plugin integrated into the Canvas LMS ecosystem.",
+		"image": "/assets/images/projects/insendi-plugin.png",
+		"url": "https://tempmail.best",
+		"role": ["Product Designer", "Visual Designer"],
+		"about": "Design and launch of a new plugin integrated into the Canvas LMS ecosystem.",
+		"result": "Successful plugin launch. The solution simplified workflows within the LMS and delivered clear value for Learning Designers working in the Canvas environment.",
+		"context": "I was the first and only designer during the initial project phase, working alongside a small team of project managers and developers. The main challenge was understanding the new market and defining the target audience within the Canvas ecosystem. From this analysis, we defined the product value proposition and a roadmap to ship a first version quickly. Thanks to close collaboration with the dev team, the product launched in a short timeframe."
 	},
 	{
-		"name": "DNS.Surf",
-		"description": "Querying DNS Resolution Results in Different Regions Worldwide.",
-		"image": "/assets/images/projects/dns.surf.png",
-		"url": "https://dns.surf"
+		"name": "INSENDI LMS",
+		"description": "LMS redesign focused on improving information architecture, navigation and accessibility.",
+		"image": "/assets/images/projects/insendi-lms.png",
+		"url": "https://dns.surf",
+		"role": ["Product Designer", "Visual Designer", "Strategy"],
+		"about": "Redesign of INSENDI's LMS focused on improving information architecture, navigation and accessibility.",
+		"result": "Usability improvements were validated through qualitative and quantitative research. The redesign optimized the product experience through a deep user-centered design approach.",
+		"context": "When I joined as Lead Product Designer, my first goal was to analyze the current state of the LMS — identifying not only its weaknesses but also the strengths that made INSENDI competitive. From this analysis I broke down the product experience into key pillars and proposed priority improvement areas: navigation, accessibility, information architecture and UI."
 	},
 	{
-		"name": "HTML.ZONE",
-		"description": "Web Toolbox.",
-		"image": "/assets/images/projects/html.zone.png",
-		"url": "https://html.zone"
+		"name": "Pickbit – Record Audio & Share",
+		"description": "Mobile app focused on audio communication for iOS and Android.",
+		"image": "/assets/images/projects/pickbit.png",
+		"url": "https://html.zone",
+		"role": ["UX Research", "Product Design"],
+		"about": "Design of a mobile application focused on audio communication for iOS and Android devices.",
+		"result": "All product flows and the complete app experience were defined in Figma. Development support was provided during implementation to ensure correct design translation on both iOS and Android.",
+		"context": "My work began with a research process to identify market opportunities. The analysis confirmed a significant increase in audio as a communication format among younger users, and a clear market gap: existing apps didn't fully address this new interaction pattern."
 	},
 	{
-		"name": "Sink",
-		"description": "A Simple / Speedy / Secure Link Shortener with Analytics.",
-		"image": "/assets/images/projects/sink.cool.png",
-		"url": "https://sink.cool"
+		"name": "MAYDAY – Urgent Messaging",
+		"description": "Messaging app designed to differentiate urgent from non-priority communications.",
+		"image": "/assets/images/projects/mayday.png",
+		"url": "https://sink.cool",
+		"role": ["Product Design", "UX Research"],
+		"about": "Design of a messaging application oriented to differentiate urgent communications from non-priority ones.",
+		"result": "All product flows and the app experience were defined in Figma. Development support was provided during implementation on both iOS and Android.",
+		"context": "During the pandemic, remote work and digital communication increased significantly. This generated message overload that blurred the boundaries between personal and professional life. The constant need to check the phone to avoid missing important information became a problem for focus and time management."
 	},
 	{
-		"name": "BroadcastChannel",
-		"description": "Turn your Telegram Channel into a MicroBlog.",
-		"image": "/assets/images/projects/broadcast-channel.png",
-		"url": "https://github.com/ccbikai/BroadcastChannel"
+		"name": "Harvard University",
+		"description": "Collaboration on digital product design projects within Harvard University's academic environment.",
+		"image": "/assets/images/projects/harvard.png",
+		"url": "https://github.com/ccbikai/BroadcastChannel",
+		"role": ["UX Designer"],
+		"about": "Collaboration on digital product design projects within Harvard University's academic environment.",
+		"result": "Participation in the design and evolution of digital products aimed at improving high-demand academic environments.",
+		"context": "Due to confidentiality agreements and the sensitive nature of the projects, most of the work cannot be shown publicly."
 	},
 	{
-		"name": "L(O*62).ONG",
-		"description": "Make your URL looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger",
-		"image": "/assets/images/projects/long.png",
-		"url": "https://loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo.ong"
+		"name": "Servicio Canario de Salud",
+		"description": "UX improvement of the medical appointment management app, focused on the cancellation process.",
+		"image": "/assets/images/projects/salud.png",
+		"url": "https://loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo.ong",
+		"role": ["UX Designer"],
+		"about": "UX improvement of the medical appointment management application of the Canary Islands Health Service, focused on the appointment cancellation process.",
+		"result": "The appointment cancellation process was redesigned, allowing users to manage their appointments more easily. This contributed to optimizing consultation management and increasing scheduling efficiency for healthcare staff.",
+		"context": "The analysis revealed that many users did not cancel their appointments when they couldn't attend due to friction in the app's cancellation process. This generated inefficiencies in medical consultation management and caused gaps in healthcare professionals' schedules."
+	},
+	{
+		"name": "Junta de Andalucía – Design System",
+		"description": "Creation of the institutional design system for Junta de Andalucía's digital environments.",
+		"image": "/assets/images/projects/andalucia.png",
+		"url": "https://tempmail.best",
+		"role": ["UX Designer"],
+		"about": "Creation of the design system for the digital environments of the Junta de Andalucía.",
+		"result": "The creation and publication of the design system improved visual consistency, brand coherence and development efficiency across the government's digital products.",
+		"context": "I was part of the design team responsible for creating the institutional design system over approximately one year. In addition to designing components and interface patterns, my work included creating documentation to facilitate adoption by product and development teams."
 	}
 ]

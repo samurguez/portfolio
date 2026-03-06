@@ -1,0 +1,138 @@
+<!-- Project Detail Modal -->
+<div
+  id="project-modal"
+  class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6"
+  role="dialog"
+  aria-modal="true"
+>
+  <!-- Backdrop -->
+  <div
+    id="modal-backdrop"
+    class="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300"
+  ></div>
+
+  <!-- Panel -->
+  <div
+    id="modal-panel"
+    class="relative z-10 w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-white dark:bg-neutral-900 rounded-2xl shadow-2xl opacity-0 translate-y-4 transition-all duration-300"
+  >
+    <!-- Close button -->
+    <button
+      id="modal-close"
+      class="absolute top-4 right-4 z-20 flex items-center justify-center w-8 h-8 rounded-full bg-white/80 dark:bg-neutral-800/80 backdrop-blur-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-neutral-200 dark:border-neutral-700 transition-colors duration-200"
+      aria-label="Close modal"
+    >
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <!-- Image -->
+    <img
+      id="modal-image"
+      src=""
+      alt=""
+      class="w-full aspect-[16/9] object-cover rounded-t-2xl"
+    />
+
+    <!-- Content -->
+    <div class="p-6 sm:p-8">
+      <!-- Title -->
+      <h2
+        id="modal-title"
+        class="text-2xl font-bold text-neutral-900 dark:text-neutral-100"
+      ></h2>
+
+      <!-- Role pills -->
+      <div id="modal-roles" class="flex flex-wrap gap-2 mt-3"></div>
+
+      <!-- About the project -->
+      <div class="mt-7">
+        <h3 class="text-xs font-semibold uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-2">
+          About the project
+        </h3>
+        <p id="modal-about" class="text-sm leading-7 text-neutral-600 dark:text-neutral-400"></p>
+      </div>
+
+      <!-- Result -->
+      <div class="mt-5">
+        <h3 class="text-xs font-semibold uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-2">
+          Result
+        </h3>
+        <p id="modal-result" class="text-sm leading-7 text-neutral-600 dark:text-neutral-400"></p>
+      </div>
+
+      <!-- Context -->
+      <div class="mt-5">
+        <h3 class="text-xs font-semibold uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-2">
+          Context
+        </h3>
+        <p id="modal-context" class="text-sm leading-7 text-neutral-600 dark:text-neutral-400"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('project-modal');
+  const backdrop = document.getElementById('modal-backdrop');
+  const panel = document.getElementById('modal-panel');
+  const closeBtn = document.getElementById('modal-close');
+
+  function openModal(data) {
+    document.getElementById('modal-image').src = data.image;
+    document.getElementById('modal-image').alt = data.name;
+    document.getElementById('modal-title').textContent = data.name;
+
+    const rolesEl = document.getElementById('modal-roles');
+    rolesEl.innerHTML = (data.role || [])
+      .map(
+        (r) =>
+          `<span class="text-xs font-medium px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300">${r}</span>`
+      )
+      .join('');
+
+    document.getElementById('modal-about').textContent = data.about;
+    document.getElementById('modal-result').textContent = data.result;
+    document.getElementById('modal-context').textContent = data.context;
+
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+
+    requestAnimationFrame(() => {
+      backdrop.classList.remove('opacity-0');
+      backdrop.classList.add('opacity-100');
+      panel.classList.remove('opacity-0', 'translate-y-4');
+      panel.classList.add('opacity-100', 'translate-y-0');
+    });
+  }
+
+  function closeModal() {
+    backdrop.classList.remove('opacity-100');
+    backdrop.classList.add('opacity-0');
+    panel.classList.remove('opacity-100', 'translate-y-0');
+    panel.classList.add('opacity-0', 'translate-y-4');
+
+    setTimeout(() => {
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }, 300);
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  backdrop.addEventListener('click', closeModal);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+  });
+
+  document.addEventListener('click', (e) => {
+    const card = e.target.closest('[data-project]');
+    if (card) {
+      const data = JSON.parse(card.dataset.project);
+      openModal(data);
+    }
+  });
+</script>

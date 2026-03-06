@@ -1,7 +1,7 @@
 ---
 import projects from "../../collections/projects.json";
-import Button from "../button.astro";
 import Project from "../project.astro";
+import ProjectModal from "../project-modal.astro";
 ---
 
 <section id="projects" class="max-w-4xl mx-auto px-7 lg:px-0">
@@ -25,13 +25,15 @@ import Project from "../project.astro";
             description={project.description}
             image={project.image}
             url={project.url}
+            role={project.role}
+            about={project.about}
+            result={project.result}
+            context={project.context}
           />
         )
       })
     }
   </div>
-
-  <div class="flex items-center justify-center w-full py-5">
-    <Button text="View All My Projects" link="/projects" />
-  </div>
 </section>
+
+<ProjectModal />

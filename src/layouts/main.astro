@@ -2,7 +2,7 @@
 import Footer from "../components/footer.astro";
 import Header from "../components/header.astro";
 import SquareLines from "../components/square-lines.astro";
-const { title } = Astro.props;
+const { title = "Samuel Rodríguez — Product Designer" } = Astro.props;
 ---
 
 <!doctype html>
@@ -11,6 +11,23 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Samuel Rodríguez Domínguez — Senior Product Designer specialized in UX. I help startups and companies design digital products that are useful, intuitive and human-centered." />
+    <meta name="author" content="Samuel Rodríguez Domínguez" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Samuel Rodríguez — Product Designer" />
+    <meta property="og:description" content="Senior Product Designer specialized in UX. Helping startups design digital products that are useful, intuitive and human-centered." />
+    <meta property="og:image" content="/assets/images/photo.png" />
+    <meta property="og:url" content="https://www.samuelrodriguezdesign.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Samuel Rodríguez — Product Designer" />
+    <meta name="twitter:description" content="Senior Product Designer specialized in UX." />
+    <meta name="twitter:image" content="/assets/images/photo.png" />
 
     <!-- Used to add dark mode right away, adding here prevents any flicker -->
     <script is:inline>
@@ -29,7 +46,7 @@ const { title } = Astro.props;
         border-radius: 20px;
       }
     </style>
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
     <script src="../assets/css/main.css"></script>
     <Fragment set:html={import.meta.env.HEADER_INJECT} />
   </head>
