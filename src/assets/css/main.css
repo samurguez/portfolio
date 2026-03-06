@@ -4,6 +4,10 @@
 
 /* Add Your Custom CSS Here */
 
+html {
+  scroll-behavior: smooth;
+}
+
 .prose img {
   border-radius: 30px;
 }
