@@ -53,7 +53,9 @@ const { title = "Samuel Rodríguez — Product Designer" } = Astro.props;
   <body class="antialiased bg-white dark:bg-neutral-950">
     <SquareLines />
     <Header />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <Footer />
     <script src="../assets/js/main.js"></script>
     <Fragment set:html={import.meta.env.FOOTER_INJECT} />

@@ -17,13 +17,16 @@ import Logo from "../components/logo.astro";
     >
     </div>
     <nav
-      class="relative z-30 flex flex-row-reverse justify-start w-full text-sm sm:justify-end text-neutral-500 dark:text-neutral-400 sm:flex-row"
+      class="relative z-30 flex flex-row-reverse justify-start w-full text-sm sm:justify-end text-neutral-600 dark:text-neutral-400 sm:flex-row"
     >
-      <div
+      <button
         id="openMenu"
-        class="flex flex-col items-end justify-center w-6 h-6 ml-4 cursor-pointer sm:hidden"
+        type="button"
+        aria-label="Abrir menú"
+        class="flex flex-col items-end justify-center w-6 h-6 ml-4 cursor-pointer sm:hidden bg-transparent border-0 p-0"
       >
         <svg
+          aria-hidden="true"
           class="w-8 h-8 dark:text-neutral-200"
           fill="none"
           stroke-linecap="round"
@@ -32,12 +35,15 @@ import Logo from "../components/logo.astro";
           viewBox="0 0 24 24"
           stroke="currentColor"><path d="M4 8h16M4 16h16"></path></svg
         >
-      </div>
-      <div
+      </button>
+      <button
         id="closeMenu"
-        class="flex flex-col items-end justify-center hidden w-6 h-6 ml-4 -translate-x-1 cursor-pointer sm:hidden"
+        type="button"
+        aria-label="Cerrar menú"
+        class="flex flex-col items-end justify-center hidden w-6 h-6 ml-4 -translate-x-1 cursor-pointer sm:hidden bg-transparent border-0 p-0"
       >
         <svg
+          aria-hidden="true"
           class="w-6 h-6 text-neutral-600 dark:text-neutral-200"
           fill="none"
           stroke-linecap="round"
@@ -46,7 +52,7 @@ import Logo from "../components/logo.astro";
           viewBox="0 0 24 24"
           stroke="currentColor"><path d="M6 18L18 6M6 6l12 12"></path></svg
         >
-      </div>
+      </button>
       <div
         id="menu"
         class="fixed top-[75px] ease-out duration-300 sm:top-0 w-full left-0 sm:py-0 pt-7 pb-4 dm:mx-0 left-0 z-40 flex-col items-end justify-start hidden w-full h-auto text-sm sm:text-base sm:h-auto sm:relative sm:flex-row sm:flex sm:text-sm sm:w-auto sm:pr-0 sm:pt-0"
@@ -72,14 +78,17 @@ import Logo from "../components/logo.astro";
           })
         }
       </div>
-      <div
+      <button
         id="darkToggle"
-        class="relative flex items-center pl-6 ml-4 font-medium tracking-wide cursor-pointer text-neutral-800 group dark:text-white"
+        type="button"
+        aria-label="Cambiar tema"
+        class="relative flex items-center pl-6 ml-4 font-medium tracking-wide cursor-pointer text-neutral-800 group dark:text-white bg-transparent border-0 p-0"
       >
         <div
           class="absolute left-0 flex items-center justify-center w-6 h-6 overflow-hidden border-b border-transparent horizon group-hover:border-neutral-600"
         >
           <svg
+            aria-hidden="true"
             class="absolute w-6 h-6 transition duration-700 transform ease"
             id="sun"
             fill="none"
@@ -93,6 +102,7 @@ import Logo from "../components/logo.astro";
             ></path></svg
           >
           <svg
+            aria-hidden="true"
             class="absolute hidden w-6 h-6 transition duration-700 transform ease"
             id="moon"
             fill="none"
@@ -110,7 +120,7 @@ import Logo from "../components/logo.astro";
           <span id="dayText" class="ml-2">Day mode</span>
           <span id="nightText" class="hidden ml-2">Night mode</span>
         </span>
-      </div>
+      </button>
     </nav>
   </div>
 </header>
