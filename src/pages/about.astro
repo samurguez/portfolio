@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import experiences from "../collections/experiences.json";
 import AboutExperience from "../components/about-experience.astro";
 import PageHeading from "../components/page-heading.astro";
@@ -12,7 +13,7 @@ import Layout from "../layouts/main.astro";
       description="Hello 👋 I'm a Product Designer specialized in UX. I focus on understanding people, simplifying complex problems, and designing digital products that are useful, intuitive, and human-centered."
     />
 
-    <img src="/assets/images/about.jpg" class="relative z-30 w-full my-10 rounded-xl" />
+    <Image src="/assets/images/about.jpg" alt="Samuel Rodríguez" width={800} height={500} format="webp" loading="lazy" class="relative z-30 w-full my-10 rounded-xl" />
 
     <h2 class="mb-2 text-2xl font-bold dark:text-neutral-200">A bit about me</h2>
     <p
