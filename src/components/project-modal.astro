@@ -79,7 +79,7 @@
   const panel = document.getElementById('modal-panel');
   const closeBtn = document.getElementById('modal-close');
 
-  function openModal(data) {
+  function openModal(data: { image: string; name: string; role: string[]; about: string; result: string; context: string }) {
     (document.getElementById('modal-image') as HTMLImageElement).src = data.image;
     (document.getElementById('modal-image') as HTMLImageElement).alt = data.name;
     document.getElementById('modal-title').textContent = data.name;
