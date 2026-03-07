@@ -8,7 +8,7 @@ const projectData = JSON.stringify({ name, description, url, image, role, about,
   data-project={projectData}
   role="button"
   tabindex="0"
-  onkeydown="if(event.key==='Enter'||event.key===' '){this.click();event.preventDefault();}"
+  onkeydown="var e=arguments[0];if(e.key==='Enter'||e.key===' '){this.click();e.preventDefault();}"
   class="relative flex flex-col items-stretch duration-300 ease-out p-7 sm:p-3 group h-100 rounded-2xl cursor-pointer"
 >
   <span
