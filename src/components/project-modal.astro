@@ -129,7 +129,7 @@
   });
 
   document.addEventListener('click', (e) => {
-    const card = (e.target as Element).closest('[data-project]');
+    const card = (e.target as Element).closest<HTMLElement>('[data-project]');
     if (card) {
       const data = JSON.parse(card.dataset.project);
       openModal(data);
