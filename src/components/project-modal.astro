@@ -80,8 +80,8 @@
   const closeBtn = document.getElementById('modal-close');
 
   function openModal(data) {
-    document.getElementById('modal-image').src = data.image;
-    document.getElementById('modal-image').alt = data.name;
+    (document.getElementById('modal-image') as HTMLImageElement).src = data.image;
+    (document.getElementById('modal-image') as HTMLImageElement).alt = data.name;
     document.getElementById('modal-title').textContent = data.name;
 
     const rolesEl = document.getElementById('modal-roles');
@@ -129,7 +129,7 @@
   });
 
   document.addEventListener('click', (e) => {
-    const card = e.target.closest('[data-project]');
+    const card = (e.target as Element).closest('[data-project]');
     if (card) {
       const data = JSON.parse(card.dataset.project);
       openModal(data);
