@@ -21,6 +21,6 @@
 	},
 	"packageManager": "pnpm@9.12.2",
 	"dependencies": {
-		"@astrojs/sitemap": "^3.7.0"
+		"@astrojs/sitemap": "^3.4.2"
 	}
 }
