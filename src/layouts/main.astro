@@ -46,6 +46,15 @@ const { title = "Samuel Rodríguez — Product Designer" } = Astro.props;
         border-radius: 20px;
       }
     </style>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4T163Z9BHJ"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4T163Z9BHJ');
+    </script>
+
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
     <script src="../assets/css/main.css"></script>
     <Fragment set:html={import.meta.env.HEADER_INJECT} />
